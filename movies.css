@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  background: pink;
+  background: rgb(252, 213, 220);
 }
 h1 {
   color: rgb(255, 0, 43);
@@ -50,7 +50,7 @@ button {
   height: 50px;
   width: 80px;
   border: 2px solid rgb(255, 0, 43);
-  background: pink;
+  background: rgb(248, 130, 149);
   font-size: medium;
   border-radius: 5px;
   cursor: pointer;
