@@ -1,0 +1,52 @@
+.container {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+img {
+  height: 250px;
+  width: 250px;
+  border-radius: 100%;
+  object-fit: fill;
+  border: 1px solid black;
+  transition: 1s;
+}
+.images:nth-child(4) {
+  object-fit: contain;
+}
+img:hover {
+  border: 2px solid pink;
+  box-shadow: 0 0 20px 20px rgb(255, 158, 174);
+}
+figcaption {
+  color: rgb(252, 60, 92);
+  font-weight: bolder;
+  font-size: x-large;
+}
+.btn,
+.snackdisplay {
+  width: 100%;
+}
+.snackdisplay {
+  text-align: center;
+  font-size: x-large;
+  color: blue;
+}
+button {
+  margin-top: 20px;
+  height: 50px;
+  width: 80px;
+  border: 2px solid rgb(255, 0, 43);
+  background: pink;
+  font-size: medium;
+  border-radius: 5px;
+  cursor: pointer;
+}
