@@ -20,6 +20,13 @@ window.onload = function () {
   let link = document.getElementsByTagName("a")[0];
   let backBtn = document.getElementsByTagName("button")[0];
   backBtn.addEventListener("click", () => {
+    let params = {
+      name: "Boo",
+      message: "A certain someone just clicked no 💔",
+    };
+    emailjs
+      .send("service_n1c3b99", "template_wo7vvhv", params)
+      .then(alert("Email sent!"));
     link.click();
   });
 };

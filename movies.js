@@ -22,6 +22,15 @@ window.onload = function () {
     });
     nextBtn.addEventListener("click", () => {
       let link = document.getElementsByTagName("a")[0];
+
+      let params = {
+        from_name: "Boo",
+        message: "I chose " + movieName,
+      };
+      emailjs
+        .send("service_n1c3b99", "template_wo7vvhv", params)
+        .then(alert("Email sent!"));
+
       link.click();
     });
   });
