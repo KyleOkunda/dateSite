@@ -21,12 +21,12 @@ window.onload = function () {
   let backBtn = document.getElementsByTagName("button")[0];
   backBtn.addEventListener("click", () => {
     let params = {
-      name: "Boo",
+      from_name: "Boo",
       message: "A certain someone just clicked no 💔",
     };
-    emailjs
-      .send("service_n1c3b99", "template_wo7vvhv", params)
-      .then(alert("Email sent!"));
+
+    emailjs.send("service_n1c3b99", "template_wo7vvhv", params);
+    alert("Email sent");
     link.click();
   });
 };

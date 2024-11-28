@@ -24,12 +24,10 @@ window.onload = function () {
       let link = document.getElementsByTagName("a")[0];
 
       let params = {
-        name: "Boo",
+        from_name: "Boo",
         message: "I chose " + snackName,
       };
-      emailjs
-        .send("service_n1c3b99", "template_wo7vvhv", params)
-        .then(alert("Email sent!"));
+      emailjs.send("service_n1c3b99", "template_wo7vvhv", params);
 
       link.click();
     });

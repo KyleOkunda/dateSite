@@ -27,9 +27,7 @@ window.onload = function () {
         from_name: "Boo",
         message: "I chose " + movieName,
       };
-      emailjs
-        .send("service_n1c3b99", "template_wo7vvhv", params)
-        .then(alert("Email sent!"));
+      emailjs.send("service_n1c3b99", "template_wo7vvhv", params);
 
       link.click();
     });
