@@ -1,7 +1,7 @@
 window.onload = function () {
   let imgSect = document.getElementsByClassName("image")[0];
   let images = Array.from(imgSect.children);
-  console.log(images);
+
   let img = images[0];
   let counter = 0;
 
@@ -17,7 +17,7 @@ window.onload = function () {
     }
   }, 5000);
 
-  let link = document.getElementsByTagName("a")[0];
+  var link = document.getElementsByTagName("a")[0];
   let backBtn = document.getElementsByTagName("button")[0];
   backBtn.addEventListener("click", () => {
     let params = {
@@ -25,8 +25,12 @@ window.onload = function () {
       message: "A certain someone just clicked no 💔",
     };
 
-    emailjs.send("service_n1c3b99", "template_wo7vvhv", params);
-    alert("Email sent");
-    link.click();
+    emailjs
+      .send("service_n1c3b99", "template_wo7vvhv", params)
+      // wait for the response from the .send then click the link
+      .then((Response) => {
+        alert("Email sent!");
+        link.click();
+      });
   });
 };

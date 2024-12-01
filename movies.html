@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movies</title>
     <link rel="stylesheet" href="movies.css" />
+    <script src="movies.js"></script>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
@@ -13,10 +14,12 @@
       (function () {
         emailjs.init({
           publicKey: "7Jlv2Plt-0kiqoCqM",
+          limitRate: {
+            throttle: 10000,
+          },
         });
       })();
     </script>
-    <script src="movies.js"></script>
   </head>
   <body>
     <h1>Pick a movie.</h1>

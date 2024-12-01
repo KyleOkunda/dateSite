@@ -6,7 +6,7 @@ window.onload = function () {
   // const myModule  = require('./file1');
   // console.log(myModule.myVariable);
 
-  let nextBtn = document.getElementById("next");
+  var nextBtn = document.getElementById("next");
   nextBtn.style.display = "none";
 
   var imageSect = document.getElementsByClassName("images")[0];
@@ -20,16 +20,21 @@ window.onload = function () {
       movieDisplay.innerHTML = "You have chosen " + movieName + ".";
       nextBtn.style.display = "";
     });
-    nextBtn.addEventListener("click", () => {
-      let link = document.getElementsByTagName("a")[0];
+  });
 
-      let params = {
-        from_name: "Boo",
-        message: "I chose " + movieName,
-      };
-      emailjs.send("service_n1c3b99", "template_wo7vvhv", params);
+  nextBtn.addEventListener("click", function () {
+    let link = document.getElementsByTagName("a")[0];
 
-      link.click();
-    });
+    let params = {
+      name: "Boo",
+      message: "I chose " + movieName,
+    };
+
+    emailjs
+      .send("service_n1c3b99", "template_wo7vvhv", params)
+      .then((Response) => {
+        alert("Email sent!");
+        link.click();
+      });
   });
 };
