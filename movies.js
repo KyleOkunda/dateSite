@@ -33,7 +33,6 @@ window.onload = function () {
     emailjs
       .send("service_n1c3b99", "template_wo7vvhv", params)
       .then((Response) => {
-        alert("Email sent!");
         link.click();
       });
   });

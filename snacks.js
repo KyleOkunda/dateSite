@@ -26,13 +26,12 @@ window.onload = function () {
     let link = document.getElementsByTagName("a")[0];
 
     let params = {
-      from_name: "Boo",
+      name: "Boo",
       message: "I chose " + snackName,
     };
     emailjs
       .send("service_n1c3b99", "template_wo7vvhv", params)
       .then((Response) => {
-        alert("Email sent");
         link.click();
       });
   });

@@ -21,7 +21,7 @@ window.onload = function () {
   let backBtn = document.getElementsByTagName("button")[0];
   backBtn.addEventListener("click", () => {
     let params = {
-      from_name: "Boo",
+      name: "Boo",
       message: "A certain someone just clicked no 💔",
     };
 
@@ -29,7 +29,6 @@ window.onload = function () {
       .send("service_n1c3b99", "template_wo7vvhv", params)
       // wait for the response from the .send then click the link
       .then((Response) => {
-        alert("Email sent!");
         link.click();
       });
   });
